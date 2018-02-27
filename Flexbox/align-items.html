@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="base.css" />
+		<style type="text/css">
+			/*align-items属性定义项目在交叉轴上如何对齐。*/
+			/* align-items: flex-start | flex-end | center | baseline | stretch;*/
+			#container{
+				display: flex;
+				
+				/*交叉轴的起点对齐 也就是向上对齐*/
+				align-items: flex-start;
+				
+				/*交叉轴的终点对齐 也就是向下对齐*/
+				align-items: flex-end;
+				
+				/*交叉轴的中点对齐 也就是居中对齐*/
+				align-items: center;
+				
+				/*项目的第一行文字的基线对齐*/
+				align-items: baseline;
+				
+				/*（默认值）如果项目未设置高度或设为auto，将占满整个容器的高度。*/
+				align-items: stretch;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="item">111111</div>
+			<div id="item">222222</div>
+			<div id="item">333333</div>
+			<div id="item">444444</div>
+			<div id="item">555555</div>
+			<div id="item">666666</div>
+		</div>
+	</body>
+
+</html>

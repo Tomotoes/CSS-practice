@@ -1,0 +1,2 @@
+顾名思义，标签选择器是直接将HTML标签作为选择器，可以是 p，h1，li，img等HTML标签。
+如：p{color:blue;}

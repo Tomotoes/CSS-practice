@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    一个没有设置宽高的块级元素 会自动填充宽度
+   -->
+   <style>
+     #mar{
+       background-color: olive;
+       height: 20px;
+       width: 500px;
+       margin-right:100px;
+       margin-left:auto;/* margin-left: 100vw - margin-right - width*/
+     }
+   </style>
+   <div id="mar"></div>
+   <!-- 
+     原本应该填充的尺寸 被 width/height 强制改变，而 margin:auto 就是为了填充这个变更的尺寸而设计的
+
+     如果 一侧是定值，一侧是 auto，则 auto 为剩余空间的大小
+     如果两侧均是 auto，则平分 剩余空间
+    -->
+
+    <!-- 
+      为什么 margin:auto 0 不会垂直居中？
+      答：一个块级元素 会自动填充 可用的水平尺寸，但不会填充垂直尺寸，
+         也就是说 margin: 0 auto , 总是有 尺寸可以计算的！
+
+      另外 当 子元素的 宽度 大于父元素的宽度 ，是无法通过 margin: 0 auto 实现居中的
+      因为 这个时候 margin 已经为负值了。
+     -->
+     <style>
+       #father{
+         height: 200px;
+         background-color: #ccc;
+         width: 200px;
+       }
+       #son{
+         height: 100px;
+         background-color: #999;
+         width: 300px;
+         margin:0 auto;
+       }
+     </style>
+     <div id="father">
+       <div id="son"></div>
+     </div>
+</body>
+</html>

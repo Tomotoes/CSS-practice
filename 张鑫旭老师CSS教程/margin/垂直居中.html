@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    1. writing-mode 与垂直居中
+   -->
+   <style>
+     .father{
+       height: 200px;
+       width: 1000px;
+       writing-mode: vertical-lr;/* 更改流的方向为 垂直方向 */
+       background-color: #999;
+     }
+     .son{
+       background-color: #ccc;
+       height: 100px;
+       width: 500px;
+       margin: auto;
+     }
+
+   </style>
+   <div class="father">
+     <div class="son">son</div>
+   </div>
+
+   <!-- 
+     绝对定位元素 与垂直居中
+    -->
+    <style>
+      .parent{
+        height: 200px;
+        background-color: #669;
+        position: relative;
+      }
+      /* 没有设置 width/height , absolute元素自动填满了容器 */
+      .child{
+        height: 100px;
+        width: 500px;
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin:auto;
+      }
+
+    </style>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <!-- 
+      背景色可以在 padding中显示
+     -->
+</body>
+</html>

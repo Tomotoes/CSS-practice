@@ -1,0 +1,15 @@
+在CSS中，类选择器 以一个点号 开头来显示：
+.red{color = "red";}
+
+<p class = "red"> sss</p>
+
+
+在页面中 ，用 class="类名"的方法进行调用
+<style type="text/css">
+p.im{color="yellow";}
+.red{color = "red";}
+</style>
+
+<p class="im red">asd</p>  最后显示黄色
+
+red权重更高 把 im覆盖了

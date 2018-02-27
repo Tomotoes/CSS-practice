@@ -1,0 +1,11 @@
+			#container {
+				width: 800px;
+				height: 500px;
+				background-color: gray;
+			}
+			
+			#item {
+				height: 50px;
+				width: 80px;
+				background-color: orange;
+			}

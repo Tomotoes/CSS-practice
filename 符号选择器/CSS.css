@@ -1,0 +1,51 @@
+/*通配选择器*/
+*{color:#000000;}
+
+/*
++号就是 紧随class="c1"这个后面的 一个p标签，并且必须是同级元素
+.c1+p{color:#00FF00;}
+*/
+
+/*
+~号就是 紧随class="c1"这个后面的 所有p标签，并且必须是同级元素
+.c1~p{color:#00FF00;}
+*/
+
+
+/*div里面所有子标签中的p标签全部设置颜色  div>p*/
+div>p{color:#00FF00;}
+
+
+/*.c1里面所有子标签中的p标签全部设置颜色  div>p*/
+.c1>p{color:#000000;}
+
+
+/*设置了title属性的a标签*/
+a[title]
+{
+color:#0000FF;
+}
+
+/*href 等于xxx 的a标签*/
+a[href="http://www.asdasd.com"]
+{
+color:#FF0000;
+}
+
+/*href开头包括xxx 的a标签*/
+a[href^='http']
+{
+color:#CC9999;
+}
+
+/*href结尾包括xxx 的a标签*/
+a[href$='dd']
+{
+color:#66FF66;
+}
+
+/*href包含xxx 的a标签*/
+a[href*='dd']
+{
+color:#3300FF;
+}

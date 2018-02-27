@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="水平居中.css" />
+		<style type="text/css">
+			.parent{
+				display: flex;
+				justify-content: center;
+			}
+			.child{
+				margin: 0 auto;
+			}
+			/*父元素 使用 flex布局
+			  然后 在设置水平对齐 justify-content:center;
+			  翻译过来是 为内容代理：居中
+			  然后child设置 margin:0 auto； 其实没有什么用了*/
+		</style>
+	</head>
+
+	<body>
+		<div class="parent">
+			<div class="child">DEMO</div>
+		</div>
+	</body>
+
+</html>

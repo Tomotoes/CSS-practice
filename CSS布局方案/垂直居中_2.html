@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="垂直居中.css" />
+		<style type="text/css">
+			.parent {
+				position: relative;
+			}
+			
+			.child {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			/*说实话 还是 喜欢 absolute 加 transform*/
+		</style>
+	</head>
+
+	<body>
+		<div class="parent">
+			<div class="child">DEMO</div>
+		</div>
+	</body>
+
+</html>

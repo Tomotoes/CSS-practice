@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=x , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    1. inline 水平元素的垂直margin 无效
+    2. margin 重叠
+    3. 绝对定位元素非定位方位的 margin值 "无效"
+    img{left:10%;top:10%;} 设置margin-bottom/right “无效”
+    因为 绝对定位元素 脱离了文档流，与相邻元素没有关系，所以它不可能像普通元素一样，设置margin，推走其他元素
+    4. margin 鞭长莫及，因为 有某些元素破坏了 文档流，设置了 float absolute ，
+      所以会造成假象，margin不会根据 这些破坏元素作为标准
+    
+    5. 内联特性导致 margin 失效
+    margin-top: 负无穷
+    但是 小到 1em 便无效了。因为 它是内联元素，默认是基线对齐，x 字母下边缘
+   -->
+   <style>
+     #wrap{
+       border:solid 2px;
+       width: 300px;
+       height: 300px;
+       margin:50px auto;
+     }
+     #wrap img{
+       height: 100px;
+       width: 100px;
+       margin-top:10px;
+     }
+   </style>
+   <div id="wrap">
+     <img src="https://tomotoes.com/images/blog/avatar.jpg" alt="">x
+   </div>
+</body>
+</html>

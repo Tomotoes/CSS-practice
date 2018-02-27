@@ -1,0 +1,9 @@
+文档级样式表将所有规则罗列在文档的开头，它可以影响整篇文档。</br>
+文档级样式表的写法 是在文档的<head>和</head>标签之间添加<style>和</style>标签</br>
+在<style>标签中指定属性type的值为"text/css",则将规则置于这两个标签之间。
+
+<head>
+<style type="text/css">
+p{color:color:#FF6633;}
+<style>
+</head>

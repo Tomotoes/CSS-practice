@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #wrap{
+            height: 200px;
+            width: 200px;
+            margin: 50px auto;
+
+            border:20px solid #ccc;
+            outline:10px solid #999;
+            outline-offset: -15px;
+
+            /* 不能贴合圆角 */
+        }
+        #div{
+            height: 200px;
+            width: 200px;
+            margin: 100px auto;
+            border-radius: 50%;
+
+            border:20px solid #ccc;
+            box-shadow: 0 0 0 10px rgb(75, 231, 13),0 0 0 15px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+
+    <div id="div"></div>
+</body>
+</html>

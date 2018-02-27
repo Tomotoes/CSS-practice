@@ -1,0 +1,22 @@
+.parent {
+	height: 60px;
+	width: 600px;
+	background-color: #ccc;
+	margin: 10% auto;
+	/*
+	 * margin-top:10%   也就是 往下移动 10%的距离
+	 * margin-left/right:auto auto的意思 就是 margin-left/right 自动充满 
+	 * 比如 body宽100 parent宽20   则margin-left/right 尺寸为 40
+	 */
+}
+
+.child {
+	height: 60px;
+	width: 200px;
+	font-size: 50px;
+	color: white;
+	background-color: gray;
+	line-height: 60px;
+	text-align: center;
+	/*设置 文本垂直居中 只要设置行高 为 child的高度 则文本会垂直居中*/
+}

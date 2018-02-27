@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    普通元素的百分比 margin 都是相对于 容器的宽度计算的
+   -->
+  <!-- 
+     子元素的高宽 百分比 是 按照父元素的高度来计算的
+
+     绝对定位的百分比 margin 是相对于 第一个具有定位属性的祖先元素（relative/absolute/fixed）的宽度计算的
+    -->
+  <style>
+    #parent {
+      margin: 20px 400px;
+      width: 100px;
+      height: 200px;
+      border: 1px #ccc dashed;
+    }
+
+    #child {
+      position: absolute;
+
+      /* 等价于 margin: 5% * 父元素的宽度  10% * 父元素的宽度; */
+      margin: 5% 10%;
+
+      /* 父元素的宽度 * 50% */
+      width: 50%; 
+
+      /* 父元素的高度 * 50% */
+      height: 50%;
+      border: 1px #999 double;
+    }
+  </style>
+  <div id="parent">
+    <div id="child"></div>
+  </div>
+</body>
+
+</html>

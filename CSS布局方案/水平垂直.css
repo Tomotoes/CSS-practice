@@ -1,0 +1,16 @@
+.parent{
+	height: 200px;
+	width: 300px;
+	background-color: #ccc;
+	margin: 10% auto;
+}
+.child {
+	height: 60px;
+	width: 200px;
+	font-size: 50px;
+	color: white;
+	background-color: gray;
+	line-height: 60px;
+	text-align: center;
+	/*设置 文本垂直居中 只要设置行高 为 child的高度 则文本会垂直居中*/
+}

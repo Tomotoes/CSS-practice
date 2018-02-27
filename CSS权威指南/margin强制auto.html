@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            border:solid 1px #ccc;
+            height: 400px;
+            width: 400px;
+        }
+        p{
+            background-color: #999;
+            width: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+           /* margin-right: auto;  auto 自动填充剩余宽度 */
+           margin-top:auto; /* 会被自动计算为 0 */
+
+           /* margin-top:15px; margin-bottom:10px; 最后两个块级元素相差15px 大的间距会吞掉小的间距 */
+        }
+    </style>
+</head>
+<body>
+    <div><p>A paragraph</p></div>
+</body>
+</html>

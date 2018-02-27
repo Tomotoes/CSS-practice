@@ -1,0 +1,20 @@
+Less入门总结
+
+因为Indigo主题使用的是 Less，所以自己有必要学习一下
+
+【0】安装
+
+npm install -g less（安装node之后）
+
+将 .less 文件编译成纯 CSS 文件，像下面这样：
+lessc styles.less > styles.css
+
+
+【1】变量
+@background-color: #ffffff;
+
+p{
+  background-color: @background-color;
+}
+
+【2】

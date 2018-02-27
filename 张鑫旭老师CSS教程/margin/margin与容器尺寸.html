@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    #mj{
+      margin:10px 20px;
+      border:solid 1px red;
+    }
+    #ll{
+      margin:10px 20px;
+      border:solid 1px red;
+    }
+  </style>
+  <!-- 
+    元素尺寸
+    1. 可视尺寸 - clientWidth (标准) 
+                 border - padding - size
+
+    2. 占据尺寸 - outerWidth
+                 包含 margin
+    
+   -->
+
+  <!-- 
+    margin 与 可视尺寸
+
+    1. 适用于 没有设定 width/height 的普通 block 水平元素 (宽高设死了，怎么会影响呢？)
+       其中不包括 float absolute fixed 元素 ，inline水平 ，table-cell 元素
+    
+    2. 只适用于水平方向尺寸
+   -->
+   <!-- 
+     margin 与 占据尺寸
+
+     1. 适用于 block/inline-block 水平元素
+     2. 适用于 任何方向
+     3. 与 width/height 值无关
+    -->
+   <!-- 
+     行内元素 设置 margin ，只有 水平方向 起作用
+    -->
+    <!-- 
+      css 的注释 必须是 /**/
+     -->
+  <div id="mj">Div</div>
+  <span id="ll">PElement</span>
+  <span>Bottom</span>
+
+</body>
+</html> 

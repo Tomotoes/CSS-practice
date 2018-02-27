@@ -1,0 +1,8 @@
+background-color: expression( (new Date()).getHours()%2 ? “#B8D4FF” : “#F08A00″ );
+
+模糊效果是将前景色设置为透明，然后给其加上text-shadow，并只进行模糊度的设置：
+
+.blury h2 {
+	color: transparent;
+	text-shadow: 0 0 4px #f36;
+}

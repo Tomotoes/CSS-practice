@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    margin 重叠通常特性
+
+    1. block 水平元素 （不包括 float 和 absolute 元素）
+    2. 不考虑 writing-mode，只发生在垂直方向 （margin-top/margin-bottom）
+   -->
+
+   <!-- 
+     margin 重叠 三种情境
+
+     1. 相邻的兄弟元素
+     2. 父级和第一个/最后一个子元素
+     3. 空的 block 元素（自己和自己）
+    -->
+    <style>
+        #margin-top{
+          margin-top:-30px;
+        }
+        #margin-bottom{
+          margin-bottom:20px;
+        }
+      </style>
+      <div id="margin-bottom">item11</div>
+      <div id="margin-top">item22</div>
+      <!-- 
+        父级和第一个/最后一个子元素 发生重叠
+
+        给子元素设置垂直方向的margin ，等同于给父元素设置相同的垂直方向的margin属性，等同于 它们俩共用一个 属性
+
+        父子 margin 重叠其他条件
+
+        margin-top 重叠
+        1. 父元素 非格式化上下文元素 没有设置 overflow:hidden
+        2. 父元素没有 border-top 设置
+        3. 父元素没有 padding-top 设置
+        4. 父元素和第一个子元素之间没有inline元素分割
+
+        margin-bottom
+        1. 继承margin-top border-bottom，padding-bottom
+        2. 父元素没有 height ，min-height，max-height 限制
+       -->
+       <style>
+         .father{
+           background-color: #333;
+           overflow: hidden;
+         }
+         .son{
+           margin:2em auto;
+         }
+       </style>
+       <div class="father">
+         <div class="son">son</div>
+       </div>
+       <!-- 
+         空 block 元素 margin 重叠其他条件
+
+         1. 元素没有 border 设置
+         2. 元素没有 padding 设置
+         3. 里面没有 inline 元素
+         4. 没有 height，或者 min-height
+
+        -->
+
+        <!-- 
+          重叠 计算规则
+
+          1. 正正取大值
+          2. 正负值相加
+          3. 负负最负值
+         -->
+
+         <!-- 
+           margin重叠的意义
+
+           1. 连续段落或列表之类，如果没有 margin重叠，首尾间距会和其他兄弟标签 1：2 关系，排版不自然
+
+           2. web中任何地方 嵌套或直接放入任何 空的div，都不会影响原来的布局。
+           3. 遗落空的任意多个 p 元素，不会影响原来的阅读排版
+          -->
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          aaa
+          <!-- 
+            善用 margin 重叠
+            bad
+            .list{
+              margin-top:15px;
+            }
+            
+            good
+            .list{
+              margin-top:15px;
+              margin-bottom:15px;              
+            }
+           -->
+</body>
+</html>
