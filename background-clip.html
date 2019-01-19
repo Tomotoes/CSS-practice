@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=x, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    #demo{
+      height: 300px;
+      width: 300px;
+      background-color: #ccc;
+      border: solid 10px #999;
+      padding:5px;
+      
+      background-clip: border-box;
+      /* 
+        默认值是 border-box 背景延伸到边框外沿（但是在边框之下）。
+        padding-box 边框下面没有背景，即背景延伸到内边距外沿。
+        content-box 背景裁剪到内容区 (content-box) 外沿。
+        text 背景被裁剪为文字的前景色。
+
+      */
+    }
+  </style>
+  <div id="demo">demo</div>
+  <style>
+    #gang{
+      border-top:20px solid;
+      border-bottom:20px solid;
+      padding:20px 0;
+      height: 20px;
+      width: 200px;
+      background-color: #999;
+      background-clip: content-box;
+      
+    }
+  </style>
+  <div id="gang"></div>
+</body>
+</html>

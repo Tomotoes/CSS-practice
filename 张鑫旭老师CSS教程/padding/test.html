@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    #demo{
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+      padding:10px;
+    }
+  </style>
+  <div id="demo">demo</div>
+  <!-- 
+    对于block元素
+    1. padding值暴走，一定会影响尺寸
+    2. width非auto，padding影响尺寸 （平时可见）
+    3. width为auto，或 box-sizing为border-box，同时padding值没有暴走，不影响尺寸
+
+    对于inline元素
+    水平padding影响尺寸，垂直padding不影响尺寸
+    垂直padding影响背景尺寸，垂直的背景尺寸 会脱离文档流，很奇怪
+
+    padding 不支持任何形式的负值
+
+    padding的百分比均是相对于宽度计算的
+
+    css正方形背景图
+    {
+      padding:50%
+      background:url(exp.jpg);
+      background-size:100%;
+      position:relative;
+    }
+    
+    inline水平元素的padding百分比值（有三个特点）：
+    1）同样相对于宽度计算；
+    2）默认的高度宽度细节有差异；//会让规范中“strut”出现，让高比宽更大
+    3）padding会断行
+
+   -->
+   <style>
+     #mid{
+       padding:0px;
+       background-color: red;
+     }
+   </style>
+   <span>top</span><br>
+   <span id="mid">content</span><br>
+   <span>bottom</span>
+
+   <style>
+     #span{
+       display: inline-block;
+       background-color: #ccc;
+       width: 200px;
+       height: 200px;
+     }
+   </style>
+   <div id="span">span display:inline-block</div>
+</body>
+</html>
